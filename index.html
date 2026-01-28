@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nam UAE | Email Signatures</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #007e5a;
+            --primary-dark: #005f44;
+            --bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(circle at 0% 0%, rgba(0, 126, 90, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(0, 126, 90, 0.1) 0%, transparent 50%);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .logo {
+            width: 140px;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 0 8px rgba(0, 126, 90, 0.3));
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .signature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .signature-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 1.25rem 1.5rem;
+            border-radius: 16px;
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .signature-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .signature-link:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(8px);
+            border-color: rgba(0, 126, 90, 0.4);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .signature-link:hover::before {
+            transform: scaleY(1);
+        }
+
+        .name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .arrow {
+            opacity: 0.5;
+            transition: transform 0.3s ease;
+        }
+
+        .signature-link:hover .arrow {
+            transform: translateX(4px);
+            opacity: 1;
+            color: var(--primary);
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="https://namuae.com/images/logo.png" alt="Nam UAE Logo" class="logo">
+        <h1>Email Signatures</h1>
+        <p>Select a contact to view their dynamic email signature.</p>
+
+        <div class="signature-grid">
+            <a href="rafna_ibrahim.html" class="signature-link">
+                <span class="name">Rafnas Ibrahim</span>
+                <span class="arrow">→</span>
+            </a>
+            <a href="eshan_kadher.html" class="signature-link">
+                <span class="name">Eshan Kadher</span>
+                <span class="arrow">→</span>
+            </a>
+            <a href="muhammed_ramees.html" class="signature-link">
+                <span class="name">Muhammed Ramees</span>
+                <span class="arrow">→</span>
+            </a>
+            <a href="sumiya_cadiri.html" class="signature-link">
+                <span class="name">Sumiya Cadiri</span>
+                <span class="arrow">→</span>
+            </a>
+            <a href="zaman_usman.html" class="signature-link">
+                <span class="name">Zaman Usman</span>
+                <span class="arrow">→</span>
+            </a>
+        </div>
+
+        <footer>
+            &copy; 2026 Nam UAE. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+
+</html>
