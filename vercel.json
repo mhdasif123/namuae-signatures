@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/email-signature/:name",
+      "destination": "/email-signature/:name.html"
+    }
+  ]
+}
